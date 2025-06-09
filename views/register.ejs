@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration | Result Management System</title>
+    <!-- <link rel="stylesheet" href="../public/register/style.css"> -->
+    <link rel="stylesheet" href="../public/style.css">
+    <link rel="stylesheet" href="/style.css">
+
+
+</head>
+
+<body>
+    <div class="registration-container">
+        <button class="theme-toggle" id="themeToggle">🌓</button>
+        <img src="/images/logo.png" alt="Logo" class="logo">
+        <h1>Create Student Account</h1>
+
+        <form id="registrationForm" action="/register" method="POST">
+            <div class="name-fields">
+                <div class="form-group">
+                    <label for="firstName">First Name</label>
+                    <input type="text" id="firstName" name="firstName" placeholder="Enter first name" required>
+                    <div class="error-message" id="firstNameError">Please enter a valid first name</div>
+                </div>
+                <div class="form-group">
+                    <label for="lastName">Last Name</label>
+                    <input type="text" id="lastName" name="lastName" placeholder="Enter last name" required>
+                    <div class="error-message" id="lastNameError">Please enter a valid last name</div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="studentId">Student ID</label>
+                <input type="text" id="studentId" name="studentId" placeholder="Enter your student ID" required>
+                <div class="error-message" id="studentIdError">Please enter a valid student ID</div>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="emailId" name="emailId" placeholder="Enter your email" required>
+                <div class="error-message" id="emailError">Please enter a valid email address</div>
+            </div>
+
+            <div class="form-group">
+                <label for="department">Department</label>
+                <select id="department" name="department" required>
+                    <option value="">Select Department</option>
+                    <option value="computer_science">Computer Science</option>
+                    <option value="electrical">Electrical Engineering</option>
+                    <option value="mechanical">Mechanical Engineering</option>
+                    <option value="business">Business Administration</option>
+                    <option value="arts">Arts & Humanities</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="Create a password" required>
+                <div class="password-strength-text" id="passwordStrengthText">Password strength: <span
+                        id="strengthText">None</span></div>
+                <div class="error-message" id="passwordError">Password must be at least 8 characters</div>
+            </div>
+
+            <div class="form-group">
+                <label for="confirmPassword">Confirm Password</label>
+                <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirm your password"
+                    required>
+                <div class="error-message" id="confirmPasswordError">Passwords do not match</div>
+            </div>
+
+            <div class="terms-check">
+                <input type="checkbox" id="terms" name="terms" required>
+                <label for="terms">I agree to the <a href="/terms">Terms of Service</a> and <a href="/privacy">Privacy
+                        Policy</a></label>
+            </div>
+
+            <button type="submit" class="register-btn">Create Account</button>
+        </form>
+
+        <div class="login-section">
+            <p class="login-text">Already have an account?</p>
+            <button onclick="window.location.href='/login'" class="login-btn">Login to Your Account</button>
+        </div>
+    </div>
+
+    <script src="/register/script.js"></script>
+</body>
+
+</html>

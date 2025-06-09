@@ -1,0 +1,22 @@
+{
+  "name": "resultmanagement",
+  "version": "1.0.0",
+  "description": "Result Management Website",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "keywords": [
+    "abc"
+  ],
+  "author": "Arpan Pal",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "ejs": "^3.1.10",
+    "express": "^5.1.0",
+    "express-session": "^1.18.1",
+    "mongoose": "^8.13.2",
+    "nodemon": "^3.1.9"
+  }
+}

@@ -1,0 +1,151 @@
+/* Base body style */
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f9f5ff;
+    /* light purple white */
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Shared container styling */
+.login-container,
+.registration-container,
+.container {
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 6px 16px rgba(106, 13, 173, 0.1);
+    /* light purple shadow */
+    text-align: center;
+    width: 100%;
+    max-width: 450px;
+}
+
+/* Logo */
+.logo {
+    display: block;
+    margin: 0 auto 20px;
+    width: 80px;
+}
+
+/* Headings */
+h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 1.6rem;
+    color: #6a0dad;
+    /* deep purple */
+}
+
+/* Form fields */
+.form-group {
+    margin-bottom: 18px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 600;
+    color: #333;
+}
+
+input,
+select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    background-color: #fff;
+    color: #333;
+}
+
+/* Dual name fields */
+.name-fields {
+    display: flex;
+    gap: 10px;
+}
+
+.name-fields .form-group {
+    flex: 1;
+}
+
+/* Error messages */
+.error-message {
+    display: none;
+    color: red;
+    font-size: 0.8rem;
+    margin-top: 4px;
+}
+
+/* Password strength text */
+.password-strength-text {
+    font-size: 0.85rem;
+    margin-top: 4px;
+    color: #6a0dad;
+}
+
+/* Terms and condition text */
+.terms-check {
+    font-size: 0.85rem;
+    margin-bottom: 20px;
+}
+
+/* Buttons */
+.register-btn,
+.login-btn,
+.btn {
+    background-color: #6a0dad;
+    color: white;
+    border: none;
+    padding: 10px;
+    width: 100%;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 10px;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.register-btn:hover,
+.login-btn:hover,
+.btn:hover {
+    background-color: #5800a3;
+}
+
+/* Forgot password link */
+.forgot-password {
+    font-size: 0.85rem;
+    display: block;
+    margin-top: -10px;
+    text-align: right;
+    color: #6a0dad;
+    text-decoration: none;
+}
+
+.forgot-password:hover {
+    text-decoration: underline;
+}
+
+/* Login page section to switch */
+.login-section,
+.register-section {
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Theme toggle button */
+.theme-toggle {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    color: #6a0dad;
+}
