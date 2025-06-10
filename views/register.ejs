@@ -1,11 +1,10 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Student Registration | Result Management System</title>
-    <!-- <link rel="stylesheet" href="../public/register/style.css"> -->
     <link rel="stylesheet" href="../public/style.css">
     <link rel="stylesheet" href="/style.css">
 
@@ -87,6 +86,102 @@
     </div>
 
     <script src="/register/script.js"></script>
+</body>
+
+</html> -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Register</title>
+    <link rel="stylesheet" href="/css/main.css">
+    <style>
+        .register-container {
+            max-width: 550px;
+            margin: 60px auto;
+            background: #fff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .register-container h2 {
+            color: #5e17eb;
+            margin-bottom: 25px;
+        }
+
+        .register-field {
+            width: 75%;
+            padding: 12px;
+            margin: 10px auto;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 16px;
+            display: block;
+            box-sizing: border-box;
+            appearance: none;
+            background-color: white;
+        }
+
+
+        .register-btn {
+            width: 50%;
+            display: block;
+            margin: 20px auto 0;
+            background-color: #5e17eb;
+            color: white;
+            padding: 12px;
+            font-size: 16px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        .register-btn:hover {
+            background-color: #4a0dcc;
+        }
+
+        .register-link {
+            margin-top: 15px;
+            display: inline-block;
+            color: #5e17eb;
+            text-decoration: none;
+        }
+
+        .register-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="register-container">
+        <h2>Register</h2>
+        <form action="/register" method="POST">
+            <input type="text" name="firstName" class="register-field" placeholder="First Name" required>
+            <input type="text" name="lastName" class="register-field" placeholder="Last Name" required>
+            <input type="text" name="studentId" class="register-field" placeholder="Student ID" required>
+            <input type="email" name="emailId" class="register-field" placeholder="Email ID" required>
+            <select name="department" class="register-field" required>
+                <option value="" disabled selected>Select Department</option>
+                <option value="Computer Science">Computer Science</option>
+                <option value="Information Technology">Information Technology</option>
+                <option value="Electronics">Electronics</option>
+                <option value="Mechanical">Mechanical</option>
+                <option value="Civil">Civil</option>
+                <option value="Electrical">Electrical</option>
+                <option value="Chemical">Chemical</option>
+            </select>
+            <input type="password" name="password" class="register-field" placeholder="Password" required>
+            <input type="password" name="confirmPassword" class="register-field" placeholder="Confirm Password"
+                required>
+            <button type="submit" class="register-btn">Register</button>
+        </form>
+        <a href="/login" class="register-link">Already have an account? Login</a>
+    </div>
 </body>
 
 </html>

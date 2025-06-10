@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Add Result</title>
+</head>
+
+<body>
+    <h2>Add Result</h2>
+    <form action="/add-result" method="POST">
+        <input type="text" name="studentId" placeholder="Student ID" required>
+        <textarea name="subjects" rows="4"
+            placeholder='[{"name": "Math", "marks": 85}, {"name": "Science", "marks": 78}]' required></textarea>
+        <button type="submit">Submit Result</button>
+    </form>
+</body>
+
+</html>

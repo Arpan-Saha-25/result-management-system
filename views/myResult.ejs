@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>My Result</title>
+</head>
+
+<body>
+    <h2>Your Result</h2>
+    <% if (result) { %>
+        <p>Student ID: <%= result.studentId %>
+        </p>
+        <ul>
+            <% result.subjects.forEach(subject=> { %>
+                <li>
+                    <%= subject.name %>: <%= subject.marks %>
+                </li>
+                <% }) %>
+        </ul>
+        <p>Total: <%= result.totalMarks %>
+        </p>
+        <p>Percentage: <%= result.percentage.toFixed(2) %>%</p>
+        <p>Grade: <%= result.grade %>
+        </p>
+        <% } else { %>
+            <p>No result found.</p>
+            <% } %>
+</body>
+
+</html>
