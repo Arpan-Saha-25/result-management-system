@@ -1,7 +1,17 @@
 // config/db.js
 const mongoose = require('mongoose');
 
-mongoose.connect('mongodb+srv://pymongo:projectmongo@cluster0.n6ubcpo.mongodb.net/', {
+// Load environment variables from .env file
+require('dotenv').config();
+
+const dbPath = process.env.DB_PATH;
+
+// Use it (example: print or connect to MongoDB)
+// console.log("Database Path:", dbPath);
+
+
+
+mongoose.connect(dbPath, {
     useNewUrlParser: true,
     useUnifiedTopology: true
 }).then(() => {
