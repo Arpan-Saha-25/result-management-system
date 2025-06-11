@@ -39,7 +39,7 @@ build/
 Thumbs.db
 
 # EJS templates cache (if used)
-views/*.ejs~
+# views/*.ejs~
 
 # Coverage reports
 coverage/

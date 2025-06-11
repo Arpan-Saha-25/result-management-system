@@ -37,17 +37,20 @@ exports.postAddResult = async (req, res) => {
     }
 };
 
+
 exports.getStudentResult = async (req, res) => {
     const studentId = req.session.user.studentId;
+    console.log("Logged in student ID:", req.session.user.studentId);
 
     try {
         const result = await Result.findOne({ studentId });
         res.render('myResult', { result });
     } catch (error) {
-        console.error("Error fetching result:", error);
-        res.status(500).send("Could not fetch result");
+        console.error('Error fetching result:', error);
+        res.status(500).send('Could not fetch result');
     }
 };
+
 
 exports.getAllResults = async (req, res) => {
     try {

@@ -1,0 +1,740 @@
+[{
+  "_id": {
+    "$oid": "6848f7d61bd87c14c264aa4f"
+  },
+  "studentId": "STU01",
+  "name": "Student_1",
+  "department": "Computer Science",
+  "subjects": [
+    {
+      "name": "Cloud Computing",
+      "marks": 85
+    },
+    {
+      "name": "IoT",
+      "marks": 79
+    },
+    {
+      "name": "Robotics",
+      "marks": 65
+    },
+    {
+      "name": "DBMS",
+      "marks": 91
+    },
+    {
+      "name": "AI Basics",
+      "marks": 83
+    },
+    {
+      "name": "ML",
+      "marks": 72
+    }
+  ],
+  "totalMarks": 475,
+  "percentage": 79.17,
+  "grade": "B+"
+},
+{
+  "_id": {
+    "$oid": "6848f7d61bd87c14c264aa50"
+  },
+  "studentId": "STU02",
+  "name": "Student_2",
+  "department": "Computer Science",
+  "subjects": [
+    {
+      "name": "Cloud Computing",
+      "marks": 92
+    },
+    {
+      "name": "IoT",
+      "marks": 95
+    },
+    {
+      "name": "Robotics",
+      "marks": 88
+    },
+    {
+      "name": "DBMS",
+      "marks": 97
+    },
+    {
+      "name": "AI Basics",
+      "marks": 90
+    },
+    {
+      "name": "ML",
+      "marks": 96
+    }
+  ],
+  "totalMarks": 558,
+  "percentage": 93,
+  "grade": "A+"
+},
+{
+  "_id": {
+    "$oid": "6848f7d61bd87c14c264aa51"
+  },
+  "studentId": "STU03",
+  "name": "Student_3",
+  "department": "Computer Science",
+  "subjects": [
+    {
+      "name": "Cloud Computing",
+      "marks": 58
+    },
+    {
+      "name": "IoT",
+      "marks": 64
+    },
+    {
+      "name": "Robotics",
+      "marks": 70
+    },
+    {
+      "name": "DBMS",
+      "marks": 62
+    },
+    {
+      "name": "AI Basics",
+      "marks": 69
+    },
+    {
+      "name": "ML",
+      "marks": 67
+    }
+  ],
+  "totalMarks": 390,
+  "percentage": 65,
+  "grade": "B"
+},
+{
+  "_id": {
+    "$oid": "6848f7d61bd87c14c264aa52"
+  },
+  "studentId": "STU04",
+  "name": "Student_4",
+  "department": "Computer Science",
+  "subjects": [
+    {
+      "name": "Cloud Computing",
+      "marks": 45
+    },
+    {
+      "name": "IoT",
+      "marks": 50
+    },
+    {
+      "name": "Robotics",
+      "marks": 42
+    },
+    {
+      "name": "DBMS",
+      "marks": 39
+    },
+    {
+      "name": "AI Basics",
+      "marks": 48
+    },
+    {
+      "name": "ML",
+      "marks": 44
+    }
+  ],
+  "totalMarks": 268,
+  "percentage": 44.67,
+  "grade": "F"
+},
+{
+  "_id": {
+    "$oid": "6848f7d61bd87c14c264aa53"
+  },
+  "studentId": "STU05",
+  "name": "Student_5",
+  "department": "Computer Science",
+  "subjects": [
+    {
+      "name": "Cloud Computing",
+      "marks": 52
+    },
+    {
+      "name": "IoT",
+      "marks": 63
+    },
+    {
+      "name": "Robotics",
+      "marks": 50
+    },
+    {
+      "name": "DBMS",
+      "marks": 93
+    },
+    {
+      "name": "AI Basics",
+      "marks": 90
+    },
+    {
+      "name": "ML",
+      "marks": 50
+    }
+  ],
+  "totalMarks": 398,
+  "percentage": 66.33,
+  "grade": "B"
+},
+{
+  "_id": {
+    "$oid": "6848f8841bd87c14c264aa69"
+  },
+  "studentId": "STU06",
+  "name": "Student_6",
+  "department": "Computer Science",
+  "subjects": [
+    {
+      "name": "Cloud Computing",
+      "marks": 70
+    },
+    {
+      "name": "IoT",
+      "marks": 72
+    },
+    {
+      "name": "Robotics",
+      "marks": 68
+    },
+    {
+      "name": "DBMS",
+      "marks": 74
+    },
+    {
+      "name": "AI Basics",
+      "marks": 76
+    },
+    {
+      "name": "ML",
+      "marks": 73
+    }
+  ],
+  "totalMarks": 433,
+  "percentage": 72.17,
+  "grade": "B"
+},
+{
+  "_id": {
+    "$oid": "6848f8841bd87c14c264aa6a"
+  },
+  "studentId": "STU07",
+  "name": "Student_7",
+  "department": "Computer Science",
+  "subjects": [
+    {
+      "name": "Cloud Computing",
+      "marks": 88
+    },
+    {
+      "name": "IoT",
+      "marks": 85
+    },
+    {
+      "name": "Robotics",
+      "marks": 90
+    },
+    {
+      "name": "DBMS",
+      "marks": 92
+    },
+    {
+      "name": "AI Basics",
+      "marks": 87
+    },
+    {
+      "name": "ML",
+      "marks": 89
+    }
+  ],
+  "totalMarks": 531,
+  "percentage": 88.5,
+  "grade": "A"
+},
+{
+  "_id": {
+    "$oid": "6848f8841bd87c14c264aa6b"
+  },
+  "studentId": "STU08",
+  "name": "Student_8",
+  "department": "Computer Science",
+  "subjects": [
+    {
+      "name": "Cloud Computing",
+      "marks": 61
+    },
+    {
+      "name": "IoT",
+      "marks": 63
+    },
+    {
+      "name": "Robotics",
+      "marks": 60
+    },
+    {
+      "name": "DBMS",
+      "marks": 59
+    },
+    {
+      "name": "AI Basics",
+      "marks": 62
+    },
+    {
+      "name": "ML",
+      "marks": 65
+    }
+  ],
+  "totalMarks": 370,
+  "percentage": 61.67,
+  "grade": "B"
+},
+{
+  "_id": {
+    "$oid": "6848f8841bd87c14c264aa6c"
+  },
+  "studentId": "STU09",
+  "name": "Student_9",
+  "department": "Computer Science",
+  "subjects": [
+    {
+      "name": "Cloud Computing",
+      "marks": 96
+    },
+    {
+      "name": "IoT",
+      "marks": 98
+    },
+    {
+      "name": "Robotics",
+      "marks": 94
+    },
+    {
+      "name": "DBMS",
+      "marks": 97
+    },
+    {
+      "name": "AI Basics",
+      "marks": 92
+    },
+    {
+      "name": "ML",
+      "marks": 95
+    }
+  ],
+  "totalMarks": 572,
+  "percentage": 95.33,
+  "grade": "A+"
+},
+{
+  "_id": {
+    "$oid": "6848f8841bd87c14c264aa6d"
+  },
+  "studentId": "STU10",
+  "name": "Student_10",
+  "department": "Computer Science",
+  "subjects": [
+    {
+      "name": "Cloud Computing",
+      "marks": 40
+    },
+    {
+      "name": "IoT",
+      "marks": 42
+    },
+    {
+      "name": "Robotics",
+      "marks": 38
+    },
+    {
+      "name": "DBMS",
+      "marks": 45
+    },
+    {
+      "name": "AI Basics",
+      "marks": 44
+    },
+    {
+      "name": "ML",
+      "marks": 41
+    }
+  ],
+  "totalMarks": 250,
+  "percentage": 41.67,
+  "grade": "F"
+},
+{
+  "_id": {
+    "$oid": "6848f8841bd87c14c264aa6e"
+  },
+  "studentId": "STU11",
+  "name": "Student_11",
+  "department": "Computer Science",
+  "subjects": [
+    {
+      "name": "Cloud Computing",
+      "marks": 73
+    },
+    {
+      "name": "IoT",
+      "marks": 70
+    },
+    {
+      "name": "Robotics",
+      "marks": 76
+    },
+    {
+      "name": "DBMS",
+      "marks": 74
+    },
+    {
+      "name": "AI Basics",
+      "marks": 72
+    },
+    {
+      "name": "ML",
+      "marks": 71
+    }
+  ],
+  "totalMarks": 436,
+  "percentage": 72.67,
+  "grade": "B+"
+},
+{
+  "_id": {
+    "$oid": "6848f8841bd87c14c264aa6f"
+  },
+  "studentId": "STU12",
+  "name": "Student_12",
+  "department": "Computer Science",
+  "subjects": [
+    {
+      "name": "Cloud Computing",
+      "marks": 64
+    },
+    {
+      "name": "IoT",
+      "marks": 67
+    },
+    {
+      "name": "Robotics",
+      "marks": 62
+    },
+    {
+      "name": "DBMS",
+      "marks": 60
+    },
+    {
+      "name": "AI Basics",
+      "marks": 66
+    },
+    {
+      "name": "ML",
+      "marks": 65
+    }
+  ],
+  "totalMarks": 384,
+  "percentage": 64,
+  "grade": "C"
+},
+{
+  "_id": {
+    "$oid": "6848f8841bd87c14c264aa70"
+  },
+  "studentId": "STU13",
+  "name": "Student_13",
+  "department": "Computer Science",
+  "subjects": [
+    {
+      "name": "Cloud Computing",
+      "marks": 91
+    },
+    {
+      "name": "IoT",
+      "marks": 89
+    },
+    {
+      "name": "Robotics",
+      "marks": 88
+    },
+    {
+      "name": "DBMS",
+      "marks": 92
+    },
+    {
+      "name": "AI Basics",
+      "marks": 90
+    },
+    {
+      "name": "ML",
+      "marks": 94
+    }
+  ],
+  "totalMarks": 544,
+  "percentage": 90.67,
+  "grade": "A+"
+},
+{
+  "_id": {
+    "$oid": "6848f8841bd87c14c264aa71"
+  },
+  "studentId": "STU14",
+  "name": "Student_14",
+  "department": "Computer Science",
+  "subjects": [
+    {
+      "name": "Cloud Computing",
+      "marks": 49
+    },
+    {
+      "name": "IoT",
+      "marks": 45
+    },
+    {
+      "name": "Robotics",
+      "marks": 50
+    },
+    {
+      "name": "DBMS",
+      "marks": 47
+    },
+    {
+      "name": "AI Basics",
+      "marks": 48
+    },
+    {
+      "name": "ML",
+      "marks": 46
+    }
+  ],
+  "totalMarks": 285,
+  "percentage": 47.5,
+  "grade": "F"
+},
+{
+  "_id": {
+    "$oid": "6848f8841bd87c14c264aa72"
+  },
+  "studentId": "STU15",
+  "name": "Student_15",
+  "department": "Computer Science",
+  "subjects": [
+    {
+      "name": "Cloud Computing",
+      "marks": 78
+    },
+    {
+      "name": "IoT",
+      "marks": 74
+    },
+    {
+      "name": "Robotics",
+      "marks": 80
+    },
+    {
+      "name": "DBMS",
+      "marks": 76
+    },
+    {
+      "name": "AI Basics",
+      "marks": 75
+    },
+    {
+      "name": "ML",
+      "marks": 79
+    }
+  ],
+  "totalMarks": 462,
+  "percentage": 77,
+  "grade": "B+"
+},
+{
+  "_id": {
+    "$oid": "6848f8841bd87c14c264aa73"
+  },
+  "studentId": "STU16",
+  "name": "Student_16",
+  "department": "Computer Science",
+  "subjects": [
+    {
+      "name": "Cloud Computing",
+      "marks": 84
+    },
+    {
+      "name": "IoT",
+      "marks": 87
+    },
+    {
+      "name": "Robotics",
+      "marks": 82
+    },
+    {
+      "name": "DBMS",
+      "marks": 85
+    },
+    {
+      "name": "AI Basics",
+      "marks": 86
+    },
+    {
+      "name": "ML",
+      "marks": 88
+    }
+  ],
+  "totalMarks": 512,
+  "percentage": 85.33,
+  "grade": "A"
+},
+{
+  "_id": {
+    "$oid": "6848f8841bd87c14c264aa74"
+  },
+  "studentId": "STU17",
+  "name": "Student_17",
+  "department": "Computer Science",
+  "subjects": [
+    {
+      "name": "Cloud Computing",
+      "marks": 67
+    },
+    {
+      "name": "IoT",
+      "marks": 65
+    },
+    {
+      "name": "Robotics",
+      "marks": 60
+    },
+    {
+      "name": "DBMS",
+      "marks": 66
+    },
+    {
+      "name": "AI Basics",
+      "marks": 68
+    },
+    {
+      "name": "ML",
+      "marks": 70
+    }
+  ],
+  "totalMarks": 396,
+  "percentage": 66,
+  "grade": "B"
+},
+{
+  "_id": {
+    "$oid": "6848f8841bd87c14c264aa75"
+  },
+  "studentId": "STU18",
+  "name": "Student_18",
+  "department": "Computer Science",
+  "subjects": [
+    {
+      "name": "Cloud Computing",
+      "marks": 54
+    },
+    {
+      "name": "IoT",
+      "marks": 58
+    },
+    {
+      "name": "Robotics",
+      "marks": 52
+    },
+    {
+      "name": "DBMS",
+      "marks": 55
+    },
+    {
+      "name": "AI Basics",
+      "marks": 60
+    },
+    {
+      "name": "ML",
+      "marks": 53
+    }
+  ],
+  "totalMarks": 332,
+  "percentage": 55.33,
+  "grade": "C"
+},
+{
+  "_id": {
+    "$oid": "6848f8841bd87c14c264aa76"
+  },
+  "studentId": "STU19",
+  "name": "Student_19",
+  "department": "Computer Science",
+  "subjects": [
+    {
+      "name": "Cloud Computing",
+      "marks": 36
+    },
+    {
+      "name": "IoT",
+      "marks": 40
+    },
+    {
+      "name": "Robotics",
+      "marks": 35
+    },
+    {
+      "name": "DBMS",
+      "marks": 38
+    },
+    {
+      "name": "AI Basics",
+      "marks": 42
+    },
+    {
+      "name": "ML",
+      "marks": 39
+    }
+  ],
+  "totalMarks": 230,
+  "percentage": 38.33,
+  "grade": "F"
+},
+{
+  "_id": {
+    "$oid": "6848f8841bd87c14c264aa77"
+  },
+  "studentId": "STU20",
+  "name": "Student_20",
+  "department": "Computer Science",
+  "subjects": [
+    {
+      "name": "Cloud Computing",
+      "marks": 82
+    },
+    {
+      "name": "IoT",
+      "marks": 80
+    },
+    {
+      "name": "Robotics",
+      "marks": 85
+    },
+    {
+      "name": "DBMS",
+      "marks": 88
+    },
+    {
+      "name": "AI Basics",
+      "marks": 81
+    },
+    {
+      "name": "ML",
+      "marks": 84
+    }
+  ],
+  "totalMarks": 500,
+  "percentage": 83.33,
+  "grade": "A"
+}]

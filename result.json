@@ -1,0 +1,102 @@
+[
+    {
+        "studentId": "S1001",
+        "subjects": [
+            {
+                "name": "Math",
+                "marks": 92
+            },
+            {
+                "name": "Science",
+                "marks": 88
+            },
+            {
+                "name": "English",
+                "marks": 85
+            }
+        ],
+        "totalMarks": 265,
+        "percentage": 88.33,
+        "grade": "A"
+    },
+    {
+        "studentId": "S1002",
+        "subjects": [
+            {
+                "name": "Math",
+                "marks": 75
+            },
+            {
+                "name": "Science",
+                "marks": 70
+            },
+            {
+                "name": "English",
+                "marks": 72
+            }
+        ],
+        "totalMarks": 217,
+        "percentage": 72.33,
+        "grade": "B"
+    },
+    {
+        "studentId": "S1003",
+        "subjects": [
+            {
+                "name": "Math",
+                "marks": 55
+            },
+            {
+                "name": "Science",
+                "marks": 60
+            },
+            {
+                "name": "English",
+                "marks": 58
+            }
+        ],
+        "totalMarks": 173,
+        "percentage": 57.67,
+        "grade": "D"
+    },
+    {
+        "studentId": "S1004",
+        "subjects": [
+            {
+                "name": "Math",
+                "marks": 100
+            },
+            {
+                "name": "Science",
+                "marks": 97
+            },
+            {
+                "name": "English",
+                "marks": 98
+            }
+        ],
+        "totalMarks": 295,
+        "percentage": 98.33,
+        "grade": "A+"
+    },
+    {
+        "studentId": "S1005",
+        "subjects": [
+            {
+                "name": "Math",
+                "marks": 40
+            },
+            {
+                "name": "Science",
+                "marks": 42
+            },
+            {
+                "name": "English",
+                "marks": 44
+            }
+        ],
+        "totalMarks": 126,
+        "percentage": 42.00,
+        "grade": "F"
+    }
+]

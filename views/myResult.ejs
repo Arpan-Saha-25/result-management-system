@@ -3,28 +3,41 @@
 
 <head>
     <title>My Result</title>
+    <link rel="stylesheet" href="/css/main.css">
 </head>
 
 <body>
-    <h2>Your Result</h2>
-    <% if (result) { %>
-        <p>Student ID: <%= result.studentId %>
-        </p>
-        <ul>
-            <% result.subjects.forEach(subject=> { %>
-                <li>
-                    <%= subject.name %>: <%= subject.marks %>
-                </li>
-                <% }) %>
-        </ul>
-        <p>Total: <%= result.totalMarks %>
-        </p>
-        <p>Percentage: <%= result.percentage.toFixed(2) %>%</p>
-        <p>Grade: <%= result.grade %>
-        </p>
-        <% } else { %>
-            <p>No result found.</p>
-            <% } %>
+    <div class="container">
+        <h2>Your Result</h2>
+
+        <% if (result) { %>
+            <div class="result-card">
+                <p><strong>Student ID:</strong>
+                    <%= result.studentId %>
+                </p>
+                <ul>
+                    <% result.subjects.forEach(subject=> { %>
+                        <li>
+                            <%= subject.name %>: <%= subject.marks %>
+                        </li>
+                        <% }) %>
+                </ul>
+                <p><strong>Total Marks:</strong>
+                    <%= result.totalMarks %>
+                </p>
+                <p><strong>Percentage:</strong>
+                    <%= result.percentage.toFixed(2) %>%
+                </p>
+                <p><strong>Grade:</strong>
+                    <%= result.grade %>
+                </p>
+            </div>
+            <% } else { %>
+                <p>No result found for your ID.</p>
+                <% } %>
+
+                    <a href="/dashboard"><button>Back to Dashboard</button></a>
+    </div>
 </body>
 
 </html>

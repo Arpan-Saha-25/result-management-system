@@ -3,11 +3,13 @@ const bcrypt = require('bcrypt');
 const User = require('../models/user');
 const Result = require('../models/result');
 
+// const user1 = await User.findOne({ studentId });
+// const match = await bcrypt.compare(password, user.password);
+
 
 exports.getHome = (req, res) => {
     res.render('home');
 };
-
 
 exports.getLogin = (req, res) => {
     res.render('login');
@@ -54,7 +56,6 @@ exports.postRegister = async (req, res) => {
     }
 };
 
-
 exports.postLogin = async (req, res) => {
     const { studentId, password } = req.body;
 
@@ -79,8 +80,6 @@ exports.logout = (req, res) => {
     });
 };
 
-
-
 exports.getDashboard = async (req, res) => {
     const studentId = req.session.user.studentId;
 
@@ -90,5 +89,32 @@ exports.getDashboard = async (req, res) => {
     } catch (error) {
         console.error("Error loading dashboard:", error);
         res.status(500).send("Error loading dashboard");
+    }
+};
+
+// Login Controller
+
+exports.loginUser = async (req, res) => {
+    const { studentId, password } = req.body;
+
+    try {
+        const user = await User.findOne({ studentId });
+
+        if (!user) {
+            return res.status(401).send('Invalid student ID or password');
+        }
+
+        const isMatch = await bcrypt.compare(password, user.password);  // ✅ Very important
+
+        if (!isMatch) {
+            return res.status(401).send('Invalid student ID or password');
+        }
+
+        req.session.user = user;
+        res.redirect('/dashboard');
+
+    } catch (error) {
+        console.error("Login error:", error);
+        res.status(500).send("Server error during login");
     }
 };
