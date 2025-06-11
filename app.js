@@ -56,12 +56,18 @@ const PORT = 3000;
 require('dotenv').config(); // Load .env
 require('./config/db'); // MongoDB Connection
 
-// Session setup
 app.use(session({
-    secret: process.env.SESSION_SECRET || 'default_secret',
+    secret: 'your-secret-key',
     resave: false,
     saveUninitialized: false
 }));
+
+// Session setup
+// app.use(session({
+//     secret: process.env.SESSION_SECRET || 'default_secret',
+//     resave: false,
+//     saveUninitialized: false
+// }));
 
 const resultRoutes = require('./routes/resultRoutes');
 app.use('/', resultRoutes);

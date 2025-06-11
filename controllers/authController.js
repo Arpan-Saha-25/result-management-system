@@ -3,22 +3,12 @@ const bcrypt = require('bcrypt');
 const User = require('../models/user');
 const Result = require('../models/result');
 
-// const user1 = await User.findOne({ studentId });
-// const match = await bcrypt.compare(password, user.password);
+// Render Pages
+exports.getHome = (req, res) => res.render('home');
+exports.getLogin = (req, res) => res.render('login');
+exports.getRegister = (req, res) => res.render('register');
 
-
-exports.getHome = (req, res) => {
-    res.render('home');
-};
-
-exports.getLogin = (req, res) => {
-    res.render('login');
-};
-
-exports.getRegister = (req, res) => {
-    res.render('register');
-};
-
+// Register Logic
 exports.postRegister = async (req, res) => {
     const { firstName, lastName, studentId, emailId, department, password, confirmPassword } = req.body;
 
@@ -31,7 +21,6 @@ exports.postRegister = async (req, res) => {
     }
 
     try {
-        // 👉 Check if studentId already exists
         const existingUser = await User.findOne({ studentId });
         if (existingUser) {
             return res.status(400).send('Student ID already registered.');
@@ -56,32 +45,50 @@ exports.postRegister = async (req, res) => {
     }
 };
 
+// Login Logic (use this only)
 exports.postLogin = async (req, res) => {
     const { studentId, password } = req.body;
 
+    console.log("🧪 Login Attempt:", studentId);
+
     try {
         const user = await User.findOne({ studentId });
-        if (!user) return res.status(400).send('Invalid student ID or password');
 
+        if (!user) {
+            console.log("❌ No user found in DB for:", studentId);
+            return res.status(400).send('Invalid student ID or password');
+        }
+
+        console.log("🔐 User found. Comparing passwords...");
         const isMatch = await bcrypt.compare(password, user.password);
-        if (!isMatch) return res.status(400).send('Invalid student ID or password');
+        console.log("✅ Passwords match?", isMatch);
 
-        req.session.user = { id: user._id, studentId: user.studentId };
+        if (!isMatch) {
+            return res.status(400).send('Invalid student ID or password');
+        }
+
+        req.session.user = { studentId: user.studentId, name: user.firstName };
+        console.log("✅ Login successful. Redirecting to dashboard...");
         res.redirect('/dashboard');
+
     } catch (error) {
-        console.error('Login error:', error);
-        res.status(500).send('Error logging in.');
+        console.error("🔥 Login error:", error);
+        res.status(500).send("Error logging in.");
     }
 };
 
+
+
+// Logout
 exports.logout = (req, res) => {
     req.session.destroy(() => {
         res.redirect('/login');
     });
 };
 
+// Dashboard (shows result)
 exports.getDashboard = async (req, res) => {
-    const studentId = req.session.user.studentId;
+    const studentId = req.session.user?.studentId;
 
     try {
         const result = await Result.findOne({ studentId });
@@ -89,32 +96,5 @@ exports.getDashboard = async (req, res) => {
     } catch (error) {
         console.error("Error loading dashboard:", error);
         res.status(500).send("Error loading dashboard");
-    }
-};
-
-// Login Controller
-
-exports.loginUser = async (req, res) => {
-    const { studentId, password } = req.body;
-
-    try {
-        const user = await User.findOne({ studentId });
-
-        if (!user) {
-            return res.status(401).send('Invalid student ID or password');
-        }
-
-        const isMatch = await bcrypt.compare(password, user.password);  // ✅ Very important
-
-        if (!isMatch) {
-            return res.status(401).send('Invalid student ID or password');
-        }
-
-        req.session.user = user;
-        res.redirect('/dashboard');
-
-    } catch (error) {
-        console.error("Login error:", error);
-        res.status(500).send("Server error during login");
     }
 };
