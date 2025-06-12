@@ -11,29 +11,55 @@
         <h2>Your Result</h2>
 
         <% if (result) { %>
-            <div class="result-card">
-                <p><strong>Student ID:</strong>
-                    <%= result.studentId %>
-                </p>
-                <ul>
+            <table class="result-table">
+                <thead>
+                    <tr>
+                        <th>Subject</th>
+                        <th>Marks</th>
+                    </tr>
+                </thead>
+                <tbody>
                     <% result.subjects.forEach(subject=> { %>
-                        <li>
-                            <%= subject.name %>: <%= subject.marks %>
-                        </li>
+                        <tr>
+                            <td>
+                                <%= subject.name %>
+                            </td>
+                            <td>
+                                <%= subject.marks %>
+                            </td>
+                        </tr>
                         <% }) %>
-                </ul>
-                <p><strong>Total Marks:</strong>
-                    <%= result.totalMarks %>
-                </p>
-                <p><strong>Percentage:</strong>
-                    <%= result.percentage.toFixed(2) %>%
-                </p>
-                <p><strong>Grade:</strong>
-                    <%= result.grade %>
-                </p>
+                </tbody>
+            </table>
+
+            <div class="result-summary">
+                <div class="result-summary-item">
+                    <strong>Student ID</strong>
+                    <span>
+                        <%= result.studentId %>
+                    </span>
+                </div>
+                <div class="result-summary-item">
+                    <strong>Total Marks</strong>
+                    <span>
+                        <%= result.totalMarks %>
+                    </span>
+                </div>
+                <div class="result-summary-item">
+                    <strong>Percentage</strong>
+                    <span>
+                        <%= result.percentage.toFixed(2) %>%
+                    </span>
+                </div>
+                <div class="result-summary-item">
+                    <strong>Grade</strong>
+                    <span>
+                        <%= result.grade %>
+                    </span>
+                </div>
             </div>
             <% } else { %>
-                <p>No result found for your ID.</p>
+                <p class="no-result">No result found for your ID.</p>
                 <% } %>
 
                     <a href="/dashboard"><button>Back to Dashboard</button></a>

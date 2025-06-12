@@ -77,8 +77,6 @@ exports.postLogin = async (req, res) => {
     }
 };
 
-
-
 // Logout
 exports.logout = (req, res) => {
     req.session.destroy(() => {
