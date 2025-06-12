@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Update Student</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/edit_student.css') }}">
+</head>
+<body>
+    <div class="top-buttons center">
+        <a href="/dashboard" class="dashboard-button">← Back to Dashboard</a>
+    </div>
+
+    <h2 class="center">Enter Student ID to Update</h2>
+    <form method="POST" class="form-container">
+        <input type="text" name="student_id" placeholder="Student ID" required>
+        <button type="submit">Proceed</button>
+    </form>
+</body>
+</html>
+

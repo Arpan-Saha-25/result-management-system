@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/dashboard.css') }}">
+</head>
+<body>
+
+    <h1>Dashboard</h1>
+
+    <div class="top-buttons">
+        <a href="/logout">Logout</a>
+        <a href="/search">Search Student by ID</a>
+        <a href="/view">View Student Result</a>
+        <a href="/add">Add Student Result</a>
+	
+	<a href="/update">Update Result</a>
+	<a href="/delete">Delete Result</a>
+	<a href="/pending_results">View Pending Results</a>
+	<a href="/update_student">Update Student Details</a>
+        
+        
+        
+        <a href="/delete_student">Delete Student</a>
+    </div>
+
+    <table>
+        <tr>
+            <th>Student ID</th>
+            <th>Name</th>
+            <th>Department</th>
+            <th>Total Marks</th>
+            <th>Percentage</th>
+            <th>Grade</th>
+        </tr>
+        {% for student in students %}
+        <tr>
+            <td>{{ student.studentId }}</td>
+            <td>{{ student.name }}</td>
+            <td>{{ student.department }}</td>
+            <td>{{ student.totalMarks }}</td>
+            <td>{{ student.percentage }}%</td>
+            <td>{{ student.grade }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+</body>
+</html>
+

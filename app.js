@@ -1,32 +1,31 @@
-
 // app.js
+require('dotenv').config(); // Load .env
+require('./config/db'); // MongoDB Connection
+
 const express = require('express');
-const session = require('express-session');
+const session = require('express-session'); // session middleware
 const path = require('path');
 const app = express();
 const PORT = 3000;
 
-require('dotenv').config(); // Load .env
-require('./config/db'); // MongoDB Connection
-
 app.use(session({
     secret: 'your-secret-key',
-    resave: false,
-    saveUninitialized: false
+    resave: false,  // prevent saving session if nothing changes
+    saveUninitialized: false // no empty sessions
 }));
 
 const resultRoutes = require('./routes/resultRoutes');
 app.use('/', resultRoutes);
 
 
-// Body parser
+// Body parser : parses to req.body
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-// Static files
+// Static files (public folder)
 app.use(express.static(path.join(__dirname, 'public')));
 
-// View engine
+// View engine : sets the folder to your EJS templ.
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
 

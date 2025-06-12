@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Update Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/update_student.css') }}">
+</head>
+<body>
+    <div class="container">
+        <a href="/dashboard"><button class="dashboard-btn">Go to Dashboard</button></a>
+        <h2>Update Result for {{ result.studentId }}</h2>
+        <form method="POST" class="form">
+            {% for i in range(6) %}
+                <label>Subject {{ i+1 }}:</label>
+                <input type="text" name="subject{{ i+1 }}" value="{{ result.subjects[i].name }}" required>
+                <label>Marks:</label>
+                <input type="number" name="marks{{ i+1 }}" value="{{ result.subjects[i].marks }}" required><br>
+            {% endfor %}
+            <input type="submit" value="Update Result" class="submit-btn">
+        </form>
+    </div>
+</body>
+</html>
+

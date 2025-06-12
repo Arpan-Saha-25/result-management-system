@@ -39,14 +39,16 @@ exports.postAddResult = async (req, res) => {
 
 
 exports.getStudentResult = async (req, res) => {
-    const studentId = req.session.user.studentId;
-    console.log("Logged in student ID:", req.session.user.studentId);
+    const studentId = req.session.user?.studentId;
+    console.log("🔍 Logged in student ID:", studentId); // Debug log
 
     try {
         const result = await Result.findOne({ studentId });
-        res.render('myResult', { result });
+        console.log("✅ Result fetched:", result); // Debug log
+
+        res.render('myResult', { result }); // This should show the EJS page
     } catch (error) {
-        console.error('Error fetching result:', error);
+        console.error('❌ Error fetching result:', error);
         res.status(500).send('Could not fetch result');
     }
 };

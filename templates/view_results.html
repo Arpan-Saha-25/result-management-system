@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>View Results</title>
+</head>
+<body>
+    <h2>Student Results</h2>
+    <table border="1">
+        <tr>
+            <th>Name</th><th>Roll</th><th>Math</th><th>Science</th><th>English</th>
+        </tr>
+        {% for student in students %}
+        <tr>
+            <td>{{ student.name }}</td>
+            <td>{{ student.roll }}</td>
+            <td>{{ student.marks.math }}</td>
+            <td>{{ student.marks.science }}</td>
+            <td>{{ student.marks.english }}</td>
+	    <td><a href="/update/{{ student._id }}">Update</a></td>
+
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
+

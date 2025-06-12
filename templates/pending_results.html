@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pending Results</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/view_student.css') }}">
+</head>
+<body>
+    <div class="center">
+        <h2>Students Without Results</h2>
+        <a href="/dashboard"><button>Go to Dashboard</button></a>
+
+        {% if pending %}
+        <table>
+            <thead>
+                <tr>
+                    <th>Student ID</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Department</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for student in pending %}
+                <tr>
+                    <td>{{ student.studentId }}</td>
+                    <td>{{ student.name }}</td>
+                    <td>{{ student.emailId }}</td>
+                    <td>{{ student.department }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        {% else %}
+            <p>No students are pending result entry.</p>
+        {% endif %}
+    </div>
+</body>
+</html>
+
