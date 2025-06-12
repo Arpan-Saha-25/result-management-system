@@ -115,14 +115,6 @@ def view_form():
 
     return render_template('view_form.html')
 
-
-
-
-
-
-
-
-
 @app.route('/add', methods=['GET', 'POST'])
 def add_student():
     if 'admin' not in session:
