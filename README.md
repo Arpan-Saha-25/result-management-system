@@ -95,12 +95,6 @@ Password: password
 
 ---
 
-## 📸 Screenshots (Optional)
-
-> Add screenshots of login, dashboard, result view, and admin panel here.
-
----
-
 ## ✅ To-Do / Future Improvements
 
 * Role-based access control
